@@ -1,0 +1,39 @@
+.highlight-section {
+  padding: 20px 70px;
+}
+.highlights-header {
+  margin-left: 30px;
+  margin-right: 30px;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.highlights-div {
+  display: flex;
+  justify-content: space-between;
+}
+.highlights-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 30px 0;
+}
+
+.highlight-section h1 {
+  text-align: center;
+}
+.highlight-section__icon {
+  font-size: 50px;
+}
+section:last-child {
+  padding: 30px;
+  background-color: #fafafa;
+}
+section:last-child h2 {
+  font-size: 1.5rem;
+  margin-top: 30px;
+  font-weight: 500;
+}
+section:last-child p {
+  line-height: 1.5;
+}
