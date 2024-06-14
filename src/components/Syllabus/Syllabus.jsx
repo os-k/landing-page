@@ -20,7 +20,7 @@ function Topic({ topic, subtopics }) {
   return (
     <div style={styles.topicContainer}>
       <div style={styles.topicHeader} onClick={toggleDropdown}>
-        <h2>{topic}</h2>
+        <h2 style={styles.topic}>{topic}</h2>
         <button style={styles.button}>{isOpen ? "▲" : "▼"}</button>
       </div>
       {isOpen && (
@@ -46,6 +46,7 @@ const styles = {
     marginLeft: "30px",
     marginRight: "30px",
   },
+
   topicHeader: {
     display: "flex",
     justifyContent: "space-between",
@@ -58,6 +59,7 @@ const styles = {
     border: "none",
     cursor: "pointer",
     fontSize: "16px",
+    color:"black"
   },
   subtopicList: {
     marginTop: "10px",
@@ -67,6 +69,42 @@ const styles = {
   subtopicItem: {
     marginBottom: "5px",
   },
+  topic:{
+fontSize: "1.2rem",
+fontWeight:"700"
+  },
 };
 
 export default Syllabus;
+// /* Extra Small Devices (Portrait Phones) */
+// @media (max-width: 479px) {
+// }
+
+// /* Small Devices (Phones) */
+// @media (min-width: 480px) and (max-width: 767px) {
+// }
+
+// /* Medium Devices (Tablets) */
+// @media (min-width: 768px) and (max-width: 991px) {
+// }
+
+// /* Large Devices (Desktops) */
+// @media (min-width: 992px) and (max-width: 1199px) {
+// }
+
+// /* Extra Large Devices (Large Desktops) */
+// @media (min-width: 1200px) {
+// }
+
+if (window.matchMedia("(max-width: 479px)").matches) {
+  styles.topicContainer.marginLeft = "10px";
+  styles.topicContainer.marginRight = "10px";
+  styles.topicContainer.padding = "8px";
+  styles.topic.fontSize = "0.95rem"
+}
+if (window.matchMedia("(min-width: 480px) and (max-width: 767px)").matches) {
+  styles.topicContainer.marginLeft = "15px";
+  styles.topicContainer.marginRight = "15px";
+  styles.topicContainer.padding = "8px";
+  styles.topic.fontSize = "1.1rem"
+}

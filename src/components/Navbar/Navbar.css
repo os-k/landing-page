@@ -1,25 +1,90 @@
-.navbar-container{
-    background-color: rgb(85, 85, 250);
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    gap: 50px;
-    padding: 10px 50px;
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(85, 85, 250);
+  color: white;
 }
-.navbar-container a{
-    text-decoration: none;
-    color: white;
+.navlinks:visited{
+  color: white;
 }
-.navbar-section__1{
-    display: flex;
-    width: 52%;
-    justify-content: space-between;
+.nav-links {
+  display: flex;
+  gap: 20px;
+  text-decoration: none;
 }
-.navbar-section__1 a{
-    margin-top: 3px;
+.navlinks:hover
+{
+    cursor: pointer;
 }
-.navbar-section__2{
-    display: flex;
-    width: 12%;
-    justify-content: space-between;
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+
+/* Extra Small Devices (Portrait Phones) */
+@media (max-width: 479px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
+      .navlinks {
+        font-size: 0.95rem;
+      }
+      .nav-links.open {
+        display: flex;
+      }
+    
+      .hamburger {
+        display: block;
+      }
+}
+
+/* Small Devices (Phones) */
+@media (min-width: 480px) and (max-width: 767px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
+    
+      .nav-links.open {
+        display: flex;
+      }
+    
+      .hamburger {
+        display: block;
+        margin-bottom: 10px;
+      }
+}
+
+/* Medium Devices (Tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+  
+}
+
+/* Large Devices (Desktops) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* CSS rules for devices with a width between 992px and 1199px */
+}
+
+/* Extra Large Devices (Large Desktops) */
+@media (min-width: 1200px) {
+    /* CSS rules for devices with a width of 1200px and up */
 }

@@ -1,27 +1,57 @@
-import "./Navbar.css";
-import SyncAltIcon from "@mui/icons-material/SyncAlt";
-import PersonIcon from '@mui/icons-material/Person';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-function Navbar() {
+import React, { useState } from 'react';
+import { Link } from 'react-scroll';
+import './Navbar.css';
+
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div className="navbar-container">
-      <div className="navbar-section__1">
-        <a href="/">Home</a>
-        <a href="/">Course Overview</a>
-        <a href="/">Instructor</a>
-        <a href="/">Testimonials</a>
-        <a href="/">Pricing</a>
-        <a href="/">FAQs</a>
-        <a href="/">Contact</a>
+    <div className="navbar">
+      <div className="hamburger" onClick={toggleMenu}>
+        &#9776; {/* Hamburger icon */}
       </div>
-      <div className="navbar-section__2">
-        <SyncAltIcon />
-        <PersonIcon />
-        <FavoriteBorderIcon />
-        <ShoppingCartIcon />
+      <div className={`nav-links ${isOpen ? 'open' : ''}`}>
+        <a className="navlinks nav-links" href="/">Home</a>
+        <Link
+            activeClass="active"
+            to="course-overview"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="navlinks"
+          >
+            Course Overview
+          </Link>
+          <Link
+            activeClass="active"
+            to="instructors"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="navlinks"
+          >
+            Instructors
+          </Link>
+          <Link
+            activeClass="active"
+            to="testimonials"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="navlinks"
+          >
+            Testimonials
+          </Link>
       </div>
     </div>
   );
-}
+};
+
 export default Navbar;

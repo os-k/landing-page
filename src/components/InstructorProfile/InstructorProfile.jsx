@@ -6,9 +6,18 @@ function InstructorProfile({ name, photo, biography }) {
     <div className="instructor-profile">
       <img src={photo} alt={`${name}'s photo`} className="instructor-photo" />
       <div className="instructor-details">
-        <h2 className="instructor-name">{name}</h2>
+        <h3 className="instructor-name">{name}</h3>
         <p className="instructor-biography">{biography}</p>
       </div>
+      <div className='social-icons'>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-linkedin"></i>
+            </a>
+        </div>
     </div>
   );
 }
