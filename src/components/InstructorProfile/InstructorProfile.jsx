@@ -4,7 +4,7 @@ import './InstructorProfile.css';
 function InstructorProfile({ name, photo, biography, link }) {
   return (
     <div className="instructor-profile">
-      <img src={photo} alt={`${name}'s photo`} className="instructor-photo" />
+      <img src={photo} alt={name} className="instructor-photo" />
       <div className="instructor-details">
         <h3 className="instructor-name">{name}</h3>
         <p className="instructor-biography">{biography}</p>
