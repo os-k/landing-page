@@ -25,29 +25,29 @@ function Form() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    
     try {
       // window.location.href = 'https://paystack.com/pay/fnupworkmasterclass';
-      const response = await fetch("/api/server.js", {
-        method: "POST",
+      const response = await axios.post('/api/server', formData, {
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
       });
-      const result = await response.json();
+      
+      const result = response.data;
       console.log(result);
+      
       if (result.success) {
-        alert("Form submitted successfully!");
-        setLoading(false);
-        setFormData(initialFormData)
+        alert('Form submitted successfully!');
+        setFormData(initialFormData);
       } else {
-        alert("Form submission failed.");
-        setLoading(false);
+        alert('Form submission failed.');
       }
     } catch (error) {
+      console.error(error);
+      alert('An error occurred: ' + error.message);
+    } finally {
       setLoading(false);
-      console.log(error);
-      alert("An error occurred: " + error.message);
     }
   };
   return (
