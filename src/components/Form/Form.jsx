@@ -26,7 +26,7 @@ function Form() {
     e.preventDefault();
     setLoading(true);
     try {
-      window.location.href = 'https://paystack.com/pay/fnupworkmasterclass';
+      // window.location.href = 'https://paystack.com/pay/fnupworkmasterclass';
       const response = await fetch("/api/server.js", {
         method: "POST",
         headers: {
