@@ -1,4 +1,5 @@
 import "./Form.css";
+import axios from 'axios';
 import { useState } from "react";
 import { ClipLoader } from 'react-spinners';
 function Form() {
@@ -27,7 +28,7 @@ function Form() {
     setLoading(true);
     
     try {
-      // window.location.href = 'https://paystack.com/pay/fnupworkmasterclass';
+      window.location.href = 'https://paystack.com/pay/fnupworkmasterclass';
       const response = await axios.post('/api/server', formData, {
         headers: {
           'Content-Type': 'application/json',
