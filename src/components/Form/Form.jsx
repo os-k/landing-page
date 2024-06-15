@@ -28,7 +28,7 @@ function Form() {
     setLoading(true);
     
     try {
-      window.location.href = 'https://paystack.com/pay/fnupworkmasterclass';
+      // window.location.href = 'https://paystack.com/pay/fnupworkmasterclass';
       const response = await axios.post('https://mail-backend-omega.vercel.app/api/server', formData, {
         headers: {
           'Content-Type': 'application/json',
