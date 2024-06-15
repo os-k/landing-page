@@ -102,7 +102,7 @@ function CourseHighlights() {
               base.
             </p>
             <p>
-              <span>Entrepreneurs:</span>
+              <span>Entrepreneurs:</span><br />
                Small business owners and entrepreneurs who want to
               leverage freelancing as a viable income stream or business model.
             </p>

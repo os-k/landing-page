@@ -1,7 +1,7 @@
 import React from 'react';
 import './InstructorProfile.css';
 
-function InstructorProfile({ name, photo, biography }) {
+function InstructorProfile({ name, photo, biography, link }) {
   return (
     <div className="instructor-profile">
       <img src={photo} alt={`${name}'s photo`} className="instructor-photo" />
@@ -11,7 +11,7 @@ function InstructorProfile({ name, photo, biography }) {
       </div>
       <div className='social-icons'>
             <a
-              href="https://linkedin.com"
+              href={link}
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -99,12 +99,18 @@ export default Syllabus;
 if (window.matchMedia("(max-width: 479px)").matches) {
   styles.topicContainer.marginLeft = "10px";
   styles.topicContainer.marginRight = "10px";
-  styles.topicContainer.padding = "8px";
-  styles.topic.fontSize = "0.95rem"
+  styles.topicContainer.padding = "0";
+  styles.topic.marginLeft = "10px";
+  styles.topic.fontSize = "0.85rem"
+  styles.topic.marginBottom = "0"
+  styles.subtopicItem.fontSize = "0.75rem"
 }
 if (window.matchMedia("(min-width: 480px) and (max-width: 767px)").matches) {
   styles.topicContainer.marginLeft = "15px";
   styles.topicContainer.marginRight = "15px";
-  styles.topicContainer.padding = "8px";
-  styles.topic.fontSize = "1.1rem"
+  styles.topicContainer.padding = "0";
+  styles.topic.fontSize = "1.1rem";
+  styles.topic.marginLeft = "10px";
+  styles.topic.marginBottom = "0"
+  styles.subtopicItem.fontSize = "1.05rem"
 }

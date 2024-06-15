@@ -15,20 +15,22 @@ const instructors = [
     name: "NDZ ANTHONY",
     photo: NDZPhoto,
     biography:
-      "Founder of LWN and a 7X certified and a top-rated Plus Freelance Analytics Professional",
-  },
+      "Ndz is a Top-rated Plus freelance professional on Upwork, specializing in providing high-quality analytics solutions. He is also the founder of LWN, a thriving tech solutions firm. As a holder of multiple analytics certifications, Ndz has been recognized repeatedly for his extensive expertise and innovative approaches that have helped numerous clients achieve their data-driven goals. Ndz brings a wealth of knowledge and practical insights to help participants elevate their analytics skills to succeed in the freelance market.",
+    link: "https://www.linkedin.com/in/ndz-anthony-66a23a107"
+    },
   {
     name: "FRANCISCA APPIAH-AGYEI",
     photo: FranciscaPhoto,
     biography:
-      "Multi-module HR Solutions Architect, SF Consultant, and six-figure earner",
-  },
+      "Francisca is a six-figure earner with over a decade of experience in SuccessFactor Consulting and HR Solutions implementation and design. She has successfully led projects that streamline HR processes and enhance organizational efficiency. Her expertise in customizing SF applications has made her a sought-after expert. Francisca offers valuable insights and practical solutions honed from over a decade of experience to help participants advance their careers and achieve financial success.",
+    link: "https://www.linkedin.com/in/francisca-appiah-agyei/"
+    },
 ];
 const courseData = [
   {
     topic: "Introduction to Freelancing",
     subtopics: [
-      "Definition and overviewof freelancing",
+      "Definition and overview of freelancing",
       "Benefits and challenges of freelancing",
       "Different types of freelancing jobs and industries",
     ],
@@ -36,7 +38,7 @@ const courseData = [
   {
     topic: "Setting Up as a Freelancer",
     subtopics: [
-      "UnderstLegal and tax considerations",
+      "Understand Legal and tax considerations",
       "Choosing a niche or specialty",
       "Building a personal brand",
     ],
@@ -113,6 +115,7 @@ function App() {
           name={instructor.name}
           photo={instructor.photo}
           biography={instructor.biography}
+          link = {instructor.link}
         />
       ))}
       <Footer />

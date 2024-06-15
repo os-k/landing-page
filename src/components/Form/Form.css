@@ -98,9 +98,22 @@
   body{
     overflow-x: hidden;
   }
-  .header-form{
-      padding: 15px 40px;
-    }
+  .form-group input, .form-group select {
+    width: 95%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+    color: #333;
+  }
+
     .form-container{
       min-height: 0;
     }

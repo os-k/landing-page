@@ -36,6 +36,7 @@ section:last-child {
 section:last-child h2 {
   margin-top: 30px;
   font-weight: 500;
+  margin-left: 15px;
 }
 section:last-child p {
   line-height: 1.5;
@@ -57,18 +58,21 @@ section img:last-child{
 }
 /* Extra Small Devices (Portrait Phones) */
 @media (max-width: 479px) {
+  .highlights-child {
+    margin: 15px 0;
+  }
   .highlights-header {
-    font-size: 1.5rem;
-    margin-left: 0;
+    font-size: 1.37rem;
+    margin-left: 5px;
   }
   .highlights-div {
     flex-direction: column;
   }
   .highlight-section {
-    padding: 20px 10px;
+    padding: 0 6px;
   }
 .highlights-child h3{
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 .highlights-child p{
   font-size: 0.95rem;
@@ -76,9 +80,11 @@ section img:last-child{
 section:last-child {
   padding: 0;
 }
+
 section:last-child h2 {
-  font-size: 1.5rem;
-  margin-top: 30px;
+	font-size: 1.5rem;
+	margin-top: 30px;
+	margin-left: 5px;
 }
 section:last-child p {
   font-size: 0.95rem;
