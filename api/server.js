@@ -13,10 +13,10 @@ app.use(bodyParser.json());
 
 // Nodemailer setup
 const transport = nodemailer.createTransport({
-  host: "smtp.yahoo.com",
-  port: 465,
-  service: "yahoo",
-  secure: false,
+  host: process.env.EMAIL_HOST,
+  port: process.env.EMAIL_PORT,
+  service: process.env.EMAIL_SERVICE,
+  secure: process.env.EMAIL_SECURE,
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS
@@ -31,8 +31,8 @@ app.post("/send", (req, res) => {
     req.body;
 
   const mailOptions = {
-    from: "omenogorsamuelk@yahoo.com", // Replace with your email
-    to: "omenogorsamuelk@yahoo.com", // Replace with the recipient email
+    from: process.env.EMAIL_USER, 
+    to: process.env.EMAIL_USER, 
     subject: "New Form Submission",
     text: `
       Email: ${email}

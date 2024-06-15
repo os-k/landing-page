@@ -27,7 +27,7 @@ function Form() {
     setLoading(true);
     try {
       window.location.href = 'https://paystack.com/pay/fnupworkmasterclass';
-      const response = await fetch("http://localhost:5000/send", {
+      const response = await fetch("/api/server", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
