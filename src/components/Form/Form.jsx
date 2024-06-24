@@ -28,7 +28,7 @@ function Form() {
     setLoading(true);
     
     try {
-      // window.location.href = 'https://paystack.com/pay/fnupworkmasterclass';
+      window.location.href = 'https://paystack.com/pay/fnupworkmasterclass';
       const response = await axios.post('/api/server.js', formData, {
         headers: {
           'Content-Type': 'application/json',
